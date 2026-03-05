@@ -1,5 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
-import { HeroComponent }        from './components/hero/hero.component';
+import { PageHeroComponent } from '../../core/components/page-hero/page-hero.component';
 import { StatsComponent }       from './components/stats/stats.component';
 import { WhatWeDoComponent }    from './components/what-we-do/what-we-do.component';
 import { HowWeDoItComponent }   from './components/how-we-do-it/how-we-do-it.component';
@@ -12,7 +12,7 @@ import { CtaComponent }         from './components/cta/cta.component';
   selector: 'app-home',
   standalone: true,
   imports: [
-    HeroComponent,
+    PageHeroComponent,
     StatsComponent,
     WhatWeDoComponent,
     HowWeDoItComponent,
@@ -22,7 +22,13 @@ import { CtaComponent }         from './components/cta/cta.component';
     CtaComponent
   ],
   template: `
-    <app-hero></app-hero>
+    <app-page-hero
+      imageSrc="assets/img/photos/bg2.jpg"
+      title="We bring innovative digital solutions for your business"
+      subtitle="Hello! This is Invictus Solutions"
+      overlayClass="bg-overlay-300"
+      [showCta]="true">
+    </app-page-hero>
 
     <section class="wrapper bg-light angled upper-end lower-end">
       <div class="container pb-14 pb-md-16">
@@ -38,16 +44,4 @@ import { CtaComponent }         from './components/cta/cta.component';
     <app-cta></app-cta>
   `
 })
-export class HomeComponent implements AfterViewInit {
-  ngAfterViewInit(): void {
-    // Re-initialise Sandbox counters, swipers, scroll cues after Angular renders
-    setTimeout(() => {
-      const w = window as any;
-      w.theme?.init?.();
-      // Re-run scroll cue animations
-      document.querySelectorAll('[data-cue]').forEach(el => {
-        el.classList.remove('animated');
-      });
-    }, 100);
-  }
-}
+export class HomeComponent {}
