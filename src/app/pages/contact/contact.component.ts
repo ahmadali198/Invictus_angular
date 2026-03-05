@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { PageHeroComponent } from '../../core/components/page-hero/page-hero.component';
 import { FormsModule } from '@angular/forms';
 import { NgIf } from '@angular/common';

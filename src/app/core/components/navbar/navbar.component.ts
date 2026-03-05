@@ -6,14 +6,17 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   standalone: true,
   imports: [RouterLink, RouterLinkActive],
   template: `
-   <header class="wrapper bg-soft-primary" style="margin-top: 15px;">
+   
       <nav class="navbar navbar-expand-lg center-logo transparent position-absolute navbar-dark">
         <div class="container justify-content-between align-items-center">
 
           <!-- Mobile: Logo + Hamburger -->
           <div class="d-flex flex-row w-100 justify-content-between align-items-center d-lg-none">
             <div class="navbar-brand">
-             
+              <a routerLink="/">
+                <img class="logo-dark"  src="assets/images/logo.png" alt="Invictus Solutions">
+                <img class="logo-light" src="assets/images/logo.png"  alt="Invictus Solutions">
+              </a>
             </div>
             <div class="navbar-other ms-auto">
               <ul class="navbar-nav flex-row align-items-center">
@@ -30,8 +33,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
               <!-- Center Logo (desktop) -->
               <div class="offcanvas-header mx-lg-auto order-0 order-lg-1 d-lg-flex px-lg-15">
                 <a routerLink="/" class="transition-none d-none d-lg-flex">
-                  <img class="logo-dark"  src="assets/img/logo-purple.png" alt="Invictus Solutions">
-                  <img class="logo-light" src="assets/img/logo-light.png"  alt="Invictus Solutions">
+                  <img class="logo-dark"  src="assets/images/logo.png" alt="Invictus Solutions">
+                  <img class="logo-light" src="assets/images/logo.png"  alt="Invictus Solutions">
                 </a>
                 <h3 class="text-white fs-30 mb-0 d-lg-none">Invictus Solutions</h3>
                 <button type="button" class="btn-close btn-close-white d-lg-none"
@@ -42,9 +45,9 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
               <div class="w-100 order-1 order-lg-0 d-lg-flex offcanvas-body">
                 <ul class="navbar-nav ms-lg-auto">
 
-                 <li class="nav-item" style="margin-top: 3px;">
-  <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
-</li>
+                  <li class="nav-item">
+                    <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+                  </li>
 
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
@@ -120,6 +123,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
                     </ul>
                   </li>
 
+    
+
                   <!-- Mobile CTA inside offcanvas -->
                   <li class="nav-item mt-3 cta-mobile">
                     <a routerLink="/contact" class="btn-inv-contact">
@@ -147,7 +152,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
             <!-- /.offcanvas -->
 
             <!-- Desktop CTA -->
-            <div class="cta-desktop ms-3">
+            <div class="cta-desktop" style="margin-left: 0px;">
               <a routerLink="/contact" class="btn-inv-contact">
                 <i class="uil uil-phone"></i> Contact
               </a>
@@ -156,10 +161,9 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
           </div>
         </div>
       </nav>
-    </header>
+
   `
 })
-
 export class NavbarComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     // Re-init Sandbox theme JS after Angular renders the navbar
