@@ -1,0 +1,73 @@
+/* ══════════════════════════════════════
+   NOTE: Sandbox CSS is loaded via angular.json
+   styles array — NOT imported here.
+   This file is ONLY Invictus additions.
+══════════════════════════════════════ */
+
+/* Single scrollbar fix */
+html { overflow-y: scroll; overflow-x: hidden; }
+body { overflow: visible; width: 100%; max-width: 100%; }
+*, *::before, *::after { box-sizing: border-box; }
+img { max-width: 100%; height: auto; }
+
+/* Bootstrap row gutter overflow fix */
+.row { margin-left: 0 !important; margin-right: 0 !important; }
+
+/* Navbar responsive font scaling */
+@media (min-width: 992px) and (max-width: 1100px) {
+  .navbar-nav .nav-link { font-size: 11px !important; padding-left: 5px !important; padding-right: 5px !important; }
+  .btn-inv-contact { font-size: 11px !important; padding: 6px 10px !important; }
+}
+@media (min-width: 1100px) and (max-width: 1260px) {
+  .navbar-nav .nav-link { font-size: 12px !important; padding-left: 7px !important; padding-right: 7px !important; }
+}
+@media (min-width: 1260px) {
+  .navbar-nav .nav-link { font-size: 13.5px !important; padding-left: 10px !important; padding-right: 10px !important; }
+}
+@media (min-width: 992px) {
+  .navbar-nav.me-lg-auto .dropdown-menu { left: auto; right: 0; }
+}
+
+/* Topbar */
+.inv-topbar {
+  background: #f5eeff; border-bottom: 1px solid #e4d5f5;
+  padding: 7px 0; font-size: 12.5px; position: relative; z-index: 1200; width: 100%;
+}
+.inv-topbar .tb-wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; }
+.inv-topbar a { color: #555; text-decoration: none; transition: color .2s; }
+.inv-topbar a:hover { color: #6f42c1; }
+.tb-divider { color: #ccc; margin: 0 8px; }
+.tb-social { display: flex; gap: 12px; }
+.tb-social a { font-size: 14px; }
+.tb-social a:hover { color: #6f42c1; }
+@media (max-width: 480px) { .inv-topbar .tb-wrap { flex-direction: column; text-align: center; } }
+
+/* HIRING badge */
+.badge-hiring {
+  display: inline-block; background: #e74c3c; color: #fff;
+  font-size: 8px; font-weight: 700; letter-spacing: .5px;
+  padding: 2px 5px; border-radius: 3px; vertical-align: middle;
+  margin-left: 3px; text-transform: uppercase;
+}
+
+/* Contact CTA */
+.btn-inv-contact {
+  background: #6f42c1; color: #fff !important; border-radius: 25px;
+  padding: 7px 18px; font-weight: 600; font-size: 13px;
+  display: inline-flex; align-items: center; gap: 5px;
+  text-decoration: none; transition: background .2s;
+  white-space: nowrap; flex-shrink: 0;
+}
+.btn-inv-contact:hover { background: #4e2070; color: #fff !important; }
+@media (max-width: 991px) { .cta-desktop { display: none !important; } }
+@media (min-width: 992px) { .cta-mobile  { display: none !important; } }
+
+.hero-btns { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 15px; margin-top: 10px; }
+
+@media (max-width: 767px) {
+  .item.col-md-5, .item.col-md-7 { width: 100%; margin-top: 0 !important; }
+}
+@media (max-width: 575px) {
+  footer .widget { text-align: center; }
+  footer .nav.social { justify-content: center; }
+}
