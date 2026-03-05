@@ -6,7 +6,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   standalone: true,
   imports: [RouterLink, RouterLinkActive],
   template: `
-    <header class="wrapper bg-soft-primary">
+   <header class="wrapper bg-soft-primary" style="margin-top: 15px;">
       <nav class="navbar navbar-expand-lg center-logo transparent position-absolute navbar-dark">
         <div class="container justify-content-between align-items-center">
 
@@ -42,9 +42,9 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
               <div class="w-100 order-1 order-lg-0 d-lg-flex offcanvas-body">
                 <ul class="navbar-nav ms-lg-auto">
 
-                  <li class="nav-item">
-                    <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
-                  </li>
+                 <li class="nav-item" style="margin-top: 3px;">
+  <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+</li>
 
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
@@ -159,6 +159,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
     </header>
   `
 })
+
 export class NavbarComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     // Re-init Sandbox theme JS after Angular renders the navbar
