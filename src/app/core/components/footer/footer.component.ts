@@ -14,7 +14,7 @@ import { FormsModule } from '@angular/forms';
           <!-- BRAND + SOCIAL -->
           <div class="col-md-6 col-lg-3">
             <div class="widget">
-              <img class="mb-4" src="assets/images/logo.png" alt="Invictus Solutions" style="max-height:50px;">
+              <img class="mb-4 logo-light" src="../../../../assets/rapid-logo-light.png" alt="Invictus Solutions" style="max-height:50px;">
               <p class="mb-4">
                 Delivering innovative digital solutions since 2014.<br class="d-none d-lg-block">
                 PSEB & PASHA registered company.
