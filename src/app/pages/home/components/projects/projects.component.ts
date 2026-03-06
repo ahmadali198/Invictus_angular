@@ -40,24 +40,24 @@ import { RouterLink } from '@angular/router';
   `
 })
 export class ProjectsComponent {
-  projects = [
-    {
-      image: 'assets/img/photos/rp1.jpg',
-      category: 'Enterprise Software',
-      title: 'ERP System Development',
-      color: '#6f42c1'
-    },
-    {
-      image: 'assets/img/photos/rp2.jpg',
-      category: 'HR Technology',
-      title: 'HRMS — Human Resource Management',
-      color: '#f7961c'
-    },
-    {
-      image: 'assets/img/photos/rp3.jpg',
-      category: 'Supply Chain',
-      title: 'Supply Connect — Warehouse Management',
-      color: '#e2626b'
-    }
-  ];
+ projects = [
+  {
+    image: 'assets/images/portfolio/ERP.jpg',
+    category: 'Enterprise Software',
+    title: 'ERP System Development',
+    color: '#6f42c1'
+  },
+  {
+    image: 'assets/images/portfolio/HRMS.png',
+    category: 'HR Technology',
+    title: 'HRMS — Human Resource Management',
+    color: '#f7961c'
+  },
+  {
+    image: 'assets/images/portfolio/Supply-Connect.jpeg',
+    category: 'Supply Chain',
+    title: 'Supply Connect — Warehouse Management',
+    color: '#e2626b'
+  }
+];
 }

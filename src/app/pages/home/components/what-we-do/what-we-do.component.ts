@@ -6,25 +6,35 @@ import { NgFor } from '@angular/common';
   standalone: true,
   imports: [NgFor],
   template: `
-    <div class="row gx-lg-8 gy-8 mt-5 mt-md-12 mt-lg-0 mb-15 align-items-center">
+    <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-18 align-items-center">
 
+      <!-- IMAGES — right side on desktop -->
       <div class="col-lg-6 order-lg-2">
         <div class="row gx-md-5 gy-5" data-cues="fadeIn" data-group="images">
           <div class="col-md-4 offset-md-2 align-self-end">
-            <figure class="rounded"><img src="assets/img/photos/g1.jpg" alt=""></figure>
+            <figure class="rounded shadow-lg">
+              <img src="assets/images/hero/HRMS.png" alt="HRMS System">
+            </figure>
           </div>
           <div class="col-md-6 align-self-end">
-            <figure class="rounded"><img src="assets/img/photos/g2.jpg" alt=""></figure>
+            <figure class="rounded shadow-lg">
+              <img src="assets/images/hero/banner.png" alt="Web Development">
+            </figure>
           </div>
           <div class="col-md-6 offset-md-1">
-            <figure class="rounded"><img src="assets/img/photos/g3.jpg" alt=""></figure>
+            <figure class="rounded shadow-lg">
+              <img src="assets/images/hero/NICTUS.png" alt="NICTUS">
+            </figure>
           </div>
           <div class="col-md-4 align-self-start">
-            <figure class="rounded"><img src="assets/img/photos/g4.jpg" alt=""></figure>
+            <figure class="rounded shadow-lg">
+              <img src="assets/images/hero/warehouse.png" alt="Warehouse System">
+            </figure>
           </div>
         </div>
       </div>
 
+      <!-- TEXT + SERVICES — left side -->
       <div class="col-lg-6">
         <h2 class="display-4 mb-3">What We Do?</h2>
         <p class="lead fs-lg mb-8 pe-xxl-2">
